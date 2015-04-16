@@ -60,6 +60,13 @@
 				.replace("</p>", "");
 			}
 		};
+	})
+	.filter('noneBreaking', function() {
+		return function(input) {
+			if (input !== undefined && input !== null) {
+				return input.replace(/ /g, "&nbsp;");
+			}
+		};
 	});
 
 })();
