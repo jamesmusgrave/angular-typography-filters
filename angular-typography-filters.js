@@ -6,7 +6,7 @@
 	.filter('enDash', function() {
 		return function(input) {
 			if (input !== undefined && input !== null) {
-				return input.replace(/-/, '–');
+				return input.replace(/ - /, ' – ');
 			}
 		};
 	})
