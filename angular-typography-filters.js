@@ -3,6 +3,13 @@
 
 	angular.module('angular-typography-filters',[])
 
+	.filter('enDash', function() {
+		return function(input) {
+			if (input !== undefined && input !== null) {
+				return input.replace(/-/, '–');
+			}
+		};
+	})
 	.filter('smartQuotes', function() {
 		return function(input) {
 			if (input !== undefined && input !== null) {
@@ -13,7 +20,7 @@
 				.replace(/'\s/, '’ ')
 				.replace(/^'/, '‘')
 				.replace(/'$/, '’')
-				.replace(/'/, '’'); 
+				.replace(/'/, '’');
 			}
 		};
 	})
@@ -35,7 +42,7 @@
 						wordArray[wordArray.length-2] += '\u00A0' + wordArray[wordArray.length-1];
 						wordArray.pop();
 						htmlString = wordArray.join(' ');
-					} 
+					}
 					elems[key].innerHTML = htmlString;
 				});
 
