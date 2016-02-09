@@ -9,11 +9,8 @@
     "typography"
   ],
   "license": "MIT",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesmusgrave/angular-typography-filters.git"
+  },
 }
