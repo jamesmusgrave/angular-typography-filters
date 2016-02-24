@@ -53,14 +53,10 @@
 	.filter('widowFixString', function() {
 		return function(input) {
 			if (input !== undefined && input !== null) {
-				var minWords = 5;
 				var wordArray = input.trim().split(' ');
-				if (wordArray.length > minWords) {
-					wordArray[wordArray.length - 2] += '\u00A0' + wordArray[wordArray.length-1];
-					wordArray.pop();
-					input = wordArray.join(' ');
-				}
-				return input;
+				wordArray[wordArray.length - 2] += '\u00A0' + wordArray[wordArray.length-1];
+				wordArray.pop();
+				return wordArray.join(' ');
 			}
 		};
 	})
